@@ -78,6 +78,8 @@
             this.textBox_command = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txt_Query = new System.Windows.Forms.TextBox();
+            this.txt_Error = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -170,6 +172,7 @@
             this.button_play.TabIndex = 0;
             this.button_play.Text = "실행";
             this.button_play.UseVisualStyleBackColor = true;
+            this.button_play.Click += new System.EventHandler(this.button_play_Click);
             // 
             // textBox_result
             // 
@@ -190,6 +193,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel3.Controls.Add(this.txt_Error);
+            this.panel3.Controls.Add(this.txt_Query);
             this.panel3.Controls.Add(this.dataGridView1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(174, 5);
@@ -207,6 +212,21 @@
             this.dataGridView1.Size = new System.Drawing.Size(557, 434);
             this.dataGridView1.TabIndex = 2;
             // 
+            // txt_Query
+            // 
+            this.txt_Query.Location = new System.Drawing.Point(14, 378);
+            this.txt_Query.Name = "txt_Query";
+            this.txt_Query.Size = new System.Drawing.Size(100, 21);
+            this.txt_Query.TabIndex = 3;
+            // 
+            // txt_Error
+            // 
+            this.txt_Error.Location = new System.Drawing.Point(120, 378);
+            this.txt_Error.Name = "txt_Error";
+            this.txt_Error.Size = new System.Drawing.Size(100, 21);
+            this.txt_Error.TabIndex = 4;
+            this.txt_Error.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -223,6 +243,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -238,6 +259,8 @@
         private System.Windows.Forms.TextBox textBox_command;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txt_Error;
+        private System.Windows.Forms.TextBox txt_Query;
     }
 }
 
